@@ -26,16 +26,16 @@
     yum install docker -y
     service docker start
 # Clone code from github:
-    git clone https://github.com/cloudtechmasters/helm-chart-metricserver-HPA.git
+    git clone https://github.com/naresh240/helm-chart-metricserver-HPA.git
     cd helm-chart-metricserver-HPA/hellospringbooteks
 # Build Maven Artifact:
     mvn clean install
 # Build Docker image for Springboot Application
-    docker build -t cloudtechmasters/hellospringbooteks .
+    docker build -t naresh240/hellospringbooteks .
 # Docker login
     docker login
 # Push docker image to dockerhub
-    docker push cloudtechmasters/hellospringbooteks
+    docker push naresh240/hellospringbooteks
 # Deploy metric-server helm chart
     helm install metrics-server metrics-server
 # Note
